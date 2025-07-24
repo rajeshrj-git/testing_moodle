@@ -16,11 +16,10 @@ docker-compose up -d --build
 ## Set up Nginx reverse proxy:
 bash
 
-sudo cp nginx-host-config/moodle.conf /etc/nginx/sites-available/moodle
-sudo ln -s /etc/nginx/sites-available/moodle /etc/nginx/sites-enabled/
+sudo ln -s /nginx-host-config/moodle.conf /etc/nginx/sites-enabled/moodle.conf
+ls -la /etc/nginx/sites-enabled/
 sudo nginx -t
-sudo systemctl restart nginx
-
+sudo systemctl reload nginx
 
 
 ## Database Setup
