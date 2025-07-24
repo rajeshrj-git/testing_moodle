@@ -1,3 +1,6 @@
+### Architecture --- User Request → Host Nginx (Port 80) → Docker Container Apache (Port 80) → Moodle PHP
+
+
 ## Set up environment variables:
 Create a .env file with your database credentials:
 bash
@@ -48,3 +51,5 @@ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' your
 ## To move inside the Docker conatiner
 
 docker exec -it container_name  /bin/bash
+
+
