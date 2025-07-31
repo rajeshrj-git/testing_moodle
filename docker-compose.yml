@@ -4,7 +4,7 @@ services:
   moodle:
     build:
       context: .
-    container_name: moodle-app
+    container_name: moodle-500-app
     ports:
       - "8080:80"
     volumes:
